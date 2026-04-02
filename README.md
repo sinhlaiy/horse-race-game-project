@@ -8,8 +8,11 @@ My second function will handle the player side of the game, like starting the ga
 My third function includes what happens when the horse wins.
   It will basically code for a screen that shows the horse that won, the time, and the money won. Yes.
 
-03-31-2026
+# 03-31-2026
 This will be an iteration of the horse race game. Players will be allotted $500 to use to bet on a horse, with the starting bet being $25. If the horse wins, the player gets double the amount that was betted. If the horse loses, the player just loses the money that they bet. 
 The functions involved in this game include: moving each horse (each have their own function), the initialization of the game by the player (press 'go'), stopping the race when a horse reaches the end, and taking/giving money.
 Someone would use this program so that they can gamble without actually losing any money (yay!).
 Data will be collected based off how much a player bets on a horse and its relationship with the outcome of the previous race.
+
+# Testing
+Individuals can test this operation by playing one round. If the game works as it is intended, the horses will stop by themselves, the money will be withdrawn/deposited into the bank account, they would be able to change the amount of money they want to bet, and be able to exit from the game when they desire. If all of these parameters are met, the game works as it should. If one or more don't perform correctly, there would be errors in the code that prevent the game from working.
