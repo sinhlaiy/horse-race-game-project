@@ -1,0 +1,6 @@
+Welcome to Sinh Lai's race track!
+You have been given $500 in credit to bet on a horse of your choice. Minimum amount to bet is $25.
+You may only bet on one horse per race, so choose wisely!
+If your horse wins, then congrats, you will receive double the amount you bet!
+If your horse loses, then too bad, you will lose the money you bet.
+Good luck!
