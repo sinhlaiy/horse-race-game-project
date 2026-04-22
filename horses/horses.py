@@ -1,17 +1,25 @@
 import turtle
 import random
-from config import configure
+import os
 
-def create_horses(image_paths):
+def create_horses():
     horses = [
-    Horse("Red", image_paths[2], -100),
-    Horse("Blue", image_paths[0], -50),
-    Horse("Orange", image_paths[1], 0),
-    Horse("Yellow", image_paths[3], 50)]
+    Horse("Red", Horse.image_paths[2], -100),
+    Horse("Blue", Horse.image_paths[0], -50),
+    Horse("Orange", Horse.image_paths[1], 0),
+    Horse("Yellow", Horse.image_paths[3], 50)]
 
     return horses
 
 class Horse:
+    folder = r"C:\BCOG\BCOG200-final-project\images"
+    image_paths = []
+    for image in sorted(os.listdir(folder)):
+        if image.endswith(".gif"):
+            path = os.path.join(folder, image)
+            turtle.register_shape(path)
+            image_paths.append(path)
+
     def __init__(self, name, shape, y_position):
         self.name = name
         self.turtle = turtle.Turtle()
@@ -19,7 +27,7 @@ class Horse:
         self.turtle.penup()
         self.turtle.goto(-350, y_position)
 
-    def move(self):
+    def move_horse(self):
         self.turtle.forward(random.randint(1,10))
 
     def stop(self):
@@ -27,11 +35,3 @@ class Horse:
             print(f"{self.name} wins!")
             return True
         return False
-
-folder = r"C:\BCOG\BCOG200-final-project\images"
-image_paths = []
-for image in sorted(os.listdir(folder)):
-    if image.endswith(".gif"):
-        path = os.path.join(folder, image)
-        turtle.register_shape(path)
-        image_paths.append(path)
