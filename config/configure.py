@@ -1,10 +1,4 @@
-#this is where the code for window will go
-import tkinter as tk
-import turtle
-import os
-from horses.horses import Horse
-from config import configure
-
+#this is where the constants for window will go
 class Config:
     #set constants
     window_height = 800
@@ -15,6 +9,8 @@ class Config:
     instructions_font_size = 18
     instructions_font = "times new roman"
     instructions_file = "instructions.txt"
+
+
 
     #def __init__(self, root):
         #self.root = root
