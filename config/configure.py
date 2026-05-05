@@ -9,24 +9,6 @@ class Config:
     instructions_font_size = 18
     instructions_font = "times new roman"
     instructions_file = "instructions.txt"
-
-
-
-    #def __init__(self, root):
-        #self.root = root
-        #self.interface_frame = tk.Frame(root)
-        #self.interface_frame.pack()
-        #self.create_buttons()
-    
-    #def create_buttons(self):
-        #3go_button = tk.Button(self.interface_frame, text = "Go", command = self.go)
-        #go_button.pack()
-
-        #quit_button = tk.Button(self.interface_frame, text = "Exit Game", command = self.root.quit)
-        #quit_button.pack()
-
-    #def go(self):
-        #Horse.move_horse(self)
         
 
 #separate window class that uses Config

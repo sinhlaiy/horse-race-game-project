@@ -29,6 +29,9 @@ class Horse:
         self.turtle.penup()
         self.turtle.goto(-350, y_position)
 
+    def reset_horses(self, y_position):
+        self.turtle.goto(-350, y_position)
+
     def move_horse(self):
         self.turtle.forward(random.randint(5,20))
 
