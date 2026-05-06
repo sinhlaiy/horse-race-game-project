@@ -7,9 +7,28 @@ from config.configure import Config
 class Race:
     def __init__(self, gui):
         self.gui = gui
+        self.draw_finish()
         Horse.load_horses(gui.screen)
         self.horses = create_horses(gui.screen)
         self.race_on = False
+
+    def draw_finish(self):
+        line = turtle.RawTurtle(self.gui.screen)
+        line.hideturtle()
+        line.penup()
+        line.pensize(10)
+        line.speed(0)
+
+        x = 550
+        line.goto(x, -400)
+        line.color("black", "white")
+        line.begin_fill()
+        line.pendown()
+        line.goto(x, 400)
+        line.goto(600,400)
+        line.goto(600, -400)
+        line.goto(x, -400)
+        line.end_fill()
 
     def start_race(self):
         self.race_on = True
@@ -36,6 +55,4 @@ class Race:
             horse.reset_horses()
 
         self.gui.screen.update()
-        #Horse.load_horses(self.screen)
-        #self.horses = create_horses(self.screen)
     
