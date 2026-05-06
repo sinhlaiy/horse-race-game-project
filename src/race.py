@@ -22,6 +22,7 @@ class Race:
         for horse in self.horses:
             horse.move_horse()
             if horse.stop():
+                self.gui.result(horse.name)
                 #print("horse has stopped")
                 self.race_on = False
                 return
@@ -29,8 +30,12 @@ class Race:
         #print("made it here")
         self.gui.root.after(100, self.race_go)
 
-    def reset_race(self, y_position):
-        Horse.reset_horses(self, y_position)
+    def reset_race(self):
+        self.race_on = False
+        for horse in self.horses:
+            horse.reset_horses()
+
+        self.gui.screen.update()
         #Horse.load_horses(self.screen)
         #self.horses = create_horses(self.screen)
     

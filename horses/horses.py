@@ -4,10 +4,10 @@ import os
 
 def create_horses(screen):
     horses = [
-    Horse("Red", Horse.image_paths[2], -200, screen),
-    Horse("Blue", Horse.image_paths[0], -75, screen),
-    Horse("Orange", Horse.image_paths[1], 75, screen),
-    Horse("Yellow", Horse.image_paths[3], 200, screen)]
+    Horse("Red", Horse.image_paths[2], -250, screen),
+    Horse("Blue", Horse.image_paths[0], -125, screen),
+    Horse("Orange", Horse.image_paths[1], 25, screen),
+    Horse("Yellow", Horse.image_paths[3], 150, screen)]
 
     return horses
 
@@ -24,13 +24,15 @@ class Horse:
 
     def __init__(self, name, shape, y_position, screen):
         self.name = name
+        self.y_position = y_position
         self.turtle = turtle.RawTurtle(screen)
         self.turtle.shape(shape)
         self.turtle.penup()
         self.turtle.goto(-350, y_position)
 
-    def reset_horses(self, y_position):
-        self.turtle.goto(-350, y_position)
+    def reset_horses(self):
+        self.turtle.penup()
+        self.turtle.goto(-350, self.y_position)
 
     def move_horse(self):
         self.turtle.forward(random.randint(5,20))

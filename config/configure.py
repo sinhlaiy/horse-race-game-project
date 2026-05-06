@@ -1,7 +1,7 @@
 #this is where the constants for window will go
 class Config:
     #set constants
-    window_height = 800
+    window_height = 1000
     window_width = 1600
 
     instructions_bg_color = "white"
