@@ -20,7 +20,7 @@ The functions involved in this game include:
 The organization of this program will be split up, since the horses will be they're own thing and the window another. This is so that the files used are not enormous. I will be taking inspo from the pygame version and also follow a similar set up to Lab 7 and Lab 8.
 
 Someone would use this program so that they can gamble without actually losing any money (yay!).
-Data will be collected based off how much a player bets on a horse and its relationship with the outcome of the previous race.
+Data could be collected based off how much a player bets on a horse and its relationship with the outcome of the previous race.
 
 # Testing
 Individuals can test this operation by playing one round. 
