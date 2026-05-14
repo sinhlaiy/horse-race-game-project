@@ -3,7 +3,7 @@ import tkinter as tk
 from horses.horses import create_horses, Horse
 from config.configure import Config
 
-
+#defines how the race starts and ends; draws the finish line and loads all objects needed
 class Race:
     def __init__(self, gui):
         self.gui = gui
@@ -42,11 +42,11 @@ class Race:
             horse.move_horse()
             if horse.stop():
                 self.gui.result(horse.name)
-                #print("horse has stopped")
+                #print("horse has stopped") == was used to make sure this ran
                 self.race_on = False
                 return
             
-        #print("made it here")
+        #print("made it here") == was used to track how far code will go without crashing
         self.gui.root.after(100, self.race_go)
 
     def reset_race(self):

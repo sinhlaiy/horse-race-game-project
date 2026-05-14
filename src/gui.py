@@ -2,16 +2,15 @@ import tkinter as tk
 import turtle
 from config.configure import Config
 
+#code in regard to any buttons or inputs that are embedded into the frame
 class Gui:
+    #the screen itself
     def __init__(self, root):
         self.root = root
-        # moving race down below to initialize_race()
         self.root.title("Sinh Lai's Horse Race")
         self.root.configure(bg="grey")
         self.button_frame = tk.Frame(root)
         self.button_frame.pack(side="top", fill="x")
-        #self.interface_frame = tk.Frame(root)
-        #self.interface_frame.pack()
         self.canvas = tk.Canvas(
             root,
             width=Config.window_width,
@@ -43,6 +42,7 @@ class Gui:
         self.update_balance_display()
         print(f"Bet placed on {horse} for ${amount}")
 
+    #buttons
     def create_buttons(self):
         go_button = tk.Button(self.button_frame, width = 12, text = "GO", command = self.race.start_race, bg = "green")
         go_button.pack(side = "left", padx = 150)
@@ -53,7 +53,7 @@ class Gui:
         play_again_button = tk.Button(self.button_frame, width = 12, text = "PLAY AGAIN", command = self.race.reset_race)
         play_again_button.pack()
 
-        #Betting
+        #betting
         self.balance_label = tk.Label(
             self.button_frame,
             text = f"Balance: ${self.betting.balance}",
@@ -99,7 +99,7 @@ class Gui:
         self.instructions_text_label.pack_propagate(False)
         self.root.update()
 
-
+#controls the act of betting and how money is moved around
 class Betting:
     def __init__(self):
         self.balance = 500

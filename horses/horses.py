@@ -2,6 +2,7 @@ import turtle
 import random
 import os
 
+#create horse objects
 def create_horses(screen):
     horses = [
     Horse("Red", Horse.image_paths[2], -250, screen),
@@ -11,6 +12,7 @@ def create_horses(screen):
 
     return horses
 
+#This defines the Horse class with relevant functions like moving and stopping
 class Horse:
     folder = r"C:\BCOG\BCOG200-final-project\images"
     image_paths = []

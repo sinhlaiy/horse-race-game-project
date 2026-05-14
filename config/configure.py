@@ -10,7 +10,3 @@ class Config:
     instructions_font = "times new roman"
     instructions_file = "instructions.txt"
         
-
-#separate window class that uses Config
-#class Window:
-    #window = Window(Config.width, Config.height)
