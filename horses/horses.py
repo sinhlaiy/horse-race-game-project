@@ -1,7 +1,7 @@
 import turtle
 import random
 import os
-import images
+from pathlib import Path
 
 #create horse objects
 def create_horses(screen):
@@ -15,15 +15,15 @@ def create_horses(screen):
 
 #This defines the Horse class with relevant functions like moving and stopping
 class Horse:
-    folder = images
+    folder = Path(__file__).parent / "images"
     image_paths = []
     @classmethod
     def load_horses(cls, screen):
         for image in sorted(os.listdir(cls.folder)):
             if image.endswith(".gif"):
-                path = os.path.join(cls.folder, image)
-                screen.addshape(path)
-                cls.image_paths.append(path)
+                path = cls.folder / image
+                screen.addshape(str(path))
+                cls.image_paths.append(str(path))
 
     def __init__(self, name, shape, y_position, screen):
         self.name = name
