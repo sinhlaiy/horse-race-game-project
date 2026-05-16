@@ -15,7 +15,7 @@ def create_horses(screen):
 
 #This defines the Horse class with relevant functions like moving and stopping
 class Horse:
-    folder = Path(__file__).parent / "images"
+    folder = Path(__file__).parent.parent / "images"
     image_paths = []
     @classmethod
     def load_horses(cls, screen):
