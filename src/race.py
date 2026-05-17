@@ -2,7 +2,8 @@ import turtle
 import tkinter as tk
 from horses.horses import create_horses, Horse
 from config.configure import Config
-
+#Attribution: utilized ChatGPT for debugging purposes and proofreading
+#was able to catch syntax and spelling errors that would have caused the project to crash
 #defines how the race starts and ends; draws the finish line and loads all objects needed
 class Race:
     def __init__(self, gui):

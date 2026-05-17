@@ -14,6 +14,8 @@ def create_horses(screen):
     return horses
 
 #This defines the Horse class with relevant functions like moving and stopping
+#Attribution: used ChatGPT to find the best method to soft code the file path
+#suggested Path from PathLib
 class Horse:
     folder = Path(__file__).parent.parent / "images"
     image_paths = []

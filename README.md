@@ -32,3 +32,7 @@ If the game works as it is intended:
 - Be able to exit from the game when they desire
 If all of these parameters are met, the game works as it should. 
 If one or more don't perform correctly, there would be errors in the code at any of these points that prevent the game from working as intended.
+
+# How to run the game
+Please download the ZIP file onto your local storage and extract all files. Then, in your terminal, navigate to the extratced folder. To launch the game, type "uv run python run_race.py":
+  - Use the appropriate buttons to bet, start the race, restart the race, and exit the game.
